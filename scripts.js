@@ -71,20 +71,10 @@ function calculateGrade() {
             grade = 1.0;
         }
     }
-    
+
     if (grade % 1 == 0) {
         grade = grade + ".0";
     }
 
     finalGrade.innerHTML = grade;
 }
-
-
-
-// mc_mistakes = 4
-// oe_correct = 0
-
-// def grade_calc(a, b):
-//     return ((((a - 0.333*25)/(25 - 0.333*25))*25 + b) / 30) * 10
-
-// print(grade_calc(25 - mc_mistakes, oe_correct))
