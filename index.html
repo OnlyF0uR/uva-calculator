@@ -7,14 +7,47 @@
 
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=roboto:400,900" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css">
+    <link stylesheet rel="stylesheet" href="styles.css">
 
     <!-- <link rel="shortcut icon" type="image/png" href="favicon.png"> -->
     <title>Grade Calculator</title>
 </head>
 
 <body>
-    <h1>Hello world</h1>
+    <h1>Grade Calculator</h1>
+    <!-- Create a button to access the hidden section -->
+    <button id="exam-settings-btn" onclick="toggleExamSettings()">Exam Settings</button>
+    <div id="exam-settings">
+        <!-- Total amount of MC points slider -->
+        <label for="totalMCPoints">Total MC Points:</label>
+        <input type="range" id="totalMCPoints" name="totalMCPoints" min="0" max="100" value="25">
+        <span id="totalMCValue">0</span>
+
+        <br>
+
+        <!-- Total amount of OE points slider -->
+        <label for="totalOEPoints">Total OE Points:</label>
+        <input type="range" id="totalOEPoints" name="totalOEPoints" min="0" max="100" value="5">
+        <span id="totalOEValue">0</span>
+    </div>
+
+    <br>
+
+    <label for="mcPoints">MC Points:</label>
+    <input type="range" id="mcPoints" name="mcPoints" min="0" max="100" value="0">
+    <span id="mcValue">0</span>
+
+    <br>
+
+    <label for="oePoints">OE Points:</label>
+    <input type="range" id="oePoints" name="oePoints" min="0" max="100" value="0">
+    <span id="oeValue">0</span>
+
+    <br>
+
+    <!-- Calculate button -->
+    <button id="calculateButton" onclick="calculateGrade()">Calculate!</button>
+    <span id="finalGrade">0.0</span>
 
     <script type="text/javascript" src="scripts.js"></script>
 </body>
